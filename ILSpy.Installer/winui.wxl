@@ -3,7 +3,7 @@
 	<String Id="VerifyReadyDlgInstallText" Overridable="yes">Click Install to begin the installation. Click Cancel to exit the wizard.
 		
 		
-		ILSpy will be installed for current user into following directory:
+		IWillSpy will be installed for current user into following directory:
 		
 		    [INSTALLDIR]
 	</String>

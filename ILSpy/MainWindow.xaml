@@ -10,7 +10,7 @@
 	xmlns:docking="clr-namespace:ICSharpCode.ILSpy.Docking"
 	xmlns:analyzers="clr-namespace:ICSharpCode.ILSpy.Analyzers"
 	xmlns:properties="clr-namespace:ICSharpCode.ILSpy.Properties"
-	Title="ILSpy"
+	Title="IWillSpy Reflector"
 	MinWidth="250"
 	MinHeight="200"
 	UseLayoutRounding="True"

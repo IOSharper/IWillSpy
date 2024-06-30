@@ -27,8 +27,8 @@ namespace ILSpy.Installer
 #endif
 			var buildOutputDir = $@"ILSpy\bin\{buildConfiguration}\net8.0-windows\win-{buildPlatform}\publish\fwdependent";
 
-			var project = new Project("ILSpy",
-							  new InstallDir(@"%LocalAppData%\Programs\ILSpy",
+			var project = new Project("IWillSpy",
+							  new InstallDir(@"%LocalAppData%\Programs\IWillSpy",
 								  new DirFiles(Path.Combine(buildOutputDir, "*.dll")),
 								  new DirFiles(Path.Combine(buildOutputDir, "*.exe")),
 								  new DirFiles(Path.Combine(buildOutputDir, "*.config")),
@@ -55,7 +55,7 @@ namespace ILSpy.Installer
 			project.MajorUpgrade = new MajorUpgrade {
 				Schedule = UpgradeSchedule.afterInstallInitialize,
 				AllowSameVersionUpgrades = true,
-				DowngradeErrorMessage = "A newer release of ILSpy is already installed on this system. Please uninstall it first to continue."
+				DowngradeErrorMessage = "A newer release of IWillSpy is already installed on this system. Please uninstall it first to continue."
 			};
 
 			project.UI = WUI.WixUI_InstallDir;
@@ -68,7 +68,7 @@ namespace ILSpy.Installer
 
 			project.ResolveWildCards().FindFile(f => f.Name.EndsWith("ILSpy.exe")).First()
 				.Shortcuts = new[] {
-					new FileShortcut("ILSpy", @"%ProgramMenu%")
+					new FileShortcut("IWillSpy", @"%ProgramMenu%")
 				};
 
 			Compiler.WixLocation = GetWixBinLocationForPackage();
